@@ -2,7 +2,11 @@
  {% block content%}
  <h1>{{page_title}}</h1>
 
- <h2>Book: {{ book.id}}</h2>
- <h3>Book: {{ book.title}}</h3>
+ <h2>Book ID: {{ book.id}}</h2>
+ <h3>Book Title: {{ book.title }}</h3>
+ <h3>Book Author: {{ book.author }}</h3>
+ <h3>Book Year: {{ book.year }}</h3>
+ <h3>Book Rating: {{ book.rating }}</h3>
+ <h3>Book Description: {{ book.description }}</h3>
 
  {% endblock %}

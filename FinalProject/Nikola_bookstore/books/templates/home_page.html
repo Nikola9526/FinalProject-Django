@@ -3,21 +3,16 @@
 {% block content %}
 
 <h1>{{page_title}}</h1>
+<h2>{{page_subtitle}}</h2>
 <div>
-    <h3>{{page_author}}</h3>
+    <h3>{{ page_author }}</h3>
 
-    {% for book in books_array %}
+    {% for book in books %}
     <div>
-        <h5>ID {{ book.id}}:</h5>
-        <h5>Title {{ book.title}}:</h5>
-        <h5>Author {{ book.author}}:</h5>
-        <h5>year {{ book.year}}:</h5>
-        <h5>rating {{ book.rating}}:</h5>
-        <h5>Desc {{ book.description}}:</h5>
-        <br>
-        <br>
-
-        <a href="{% url 'book' book.id %}">{{book.title}}</a>
+        <h5>Book {{ book.id }}:</h5>
+        
+        
+        <a href="{% url 'book_detail' book.id %}">{{book.title}}</a>
 
         
 
