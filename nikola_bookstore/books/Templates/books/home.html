@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookStore</title>
+    </head>
+    <body>
+        {% extends "books/base.html" %}
+        {% block title %}Home {% endblock %}
+        <h1>Welcome to the BookStore</h1>
+        {% for book in books %}
+        <div>
+            <h2>{{ book.title }}</h2>
+            <p>Author: {{ book.author }}</p>
+            <a href="{% url 'book_detail' book.id %}"> View Detials</a>
+        </div>
+        {% endfor %}
+        {% endblock %}
+    </body>
+</html>
